@@ -1,0 +1,112 @@
+{
+  "version": "32.0.0",
+  "artifacts": {
+    "CertificateExpiryNotifierStack.assets": {
+      "type": "cdk:asset-manifest",
+      "properties": {
+        "file": "CertificateExpiryNotifierStack.assets.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+      }
+    },
+    "CertificateExpiryNotifierStack": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://unknown-account/unknown-region",
+      "properties": {
+        "templateFile": "CertificateExpiryNotifierStack.template.json",
+        "validateOnSynth": false,
+        "assumeRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-deploy-role-${AWS::AccountId}-${AWS::Region}",
+        "cloudFormationExecutionRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-cfn-exec-role-${AWS::AccountId}-${AWS::Region}",
+        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/81eb295acbeda7264c9949f259f839d7cd886744b3dfe36845b13a42006d2965.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version",
+        "additionalDependencies": [
+          "CertificateExpiryNotifierStack.assets"
+        ],
+        "lookupRole": {
+          "arn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-lookup-role-${AWS::AccountId}-${AWS::Region}",
+          "requiresBootstrapStackVersion": 8,
+          "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+        }
+      },
+      "dependencies": [
+        "CertificateExpiryNotifierStack.assets"
+      ],
+      "metadata": {
+        "/CertificateExpiryNotifierStack/NotifierLambdaRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "NotifierLambdaRole5411B33E"
+          }
+        ],
+        "/CertificateExpiryNotifierStack/NotifierLambdaPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "NotifierLambdaPolicy404EB76D"
+          }
+        ],
+        "/CertificateExpiryNotifierStack/NotifierSNSTopic/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "NotifierSNSTopicB7043842"
+          }
+        ],
+        "/CertificateExpiryNotifierStack/NotifierSNSTopic/testemailaddress@testdomain.com/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "NotifierSNSTopictestemailaddresstestdomaincom72798126"
+          }
+        ],
+        "/CertificateExpiryNotifierStack/NotifierLambda/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "NotifierLambdaF56D8BAF"
+          }
+        ],
+        "/CertificateExpiryNotifierStack/NotifierRule/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "NotifierRule2EAE52D5"
+          }
+        ],
+        "/CertificateExpiryNotifierStack/NotifierRule/AllowEventRuleCertificateExpiryNotifierStackNotifierLambdaC853EC37": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "NotifierRuleAllowEventRuleCertificateExpiryNotifierStackNotifierLambdaC853EC37A6E0CD40"
+          }
+        ],
+        "/CertificateExpiryNotifierStack/CDKMetadata/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadata"
+          }
+        ],
+        "/CertificateExpiryNotifierStack/CDKMetadata/Condition": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadataAvailable"
+          }
+        ],
+        "/CertificateExpiryNotifierStack/BootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BootstrapVersion"
+          }
+        ],
+        "/CertificateExpiryNotifierStack/CheckBootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CheckBootstrapVersion"
+          }
+        ]
+      },
+      "displayName": "CertificateExpiryNotifierStack"
+    },
+    "Tree": {
+      "type": "cdk:tree",
+      "properties": {
+        "file": "tree.json"
+      }
+    }
+  }
+}
